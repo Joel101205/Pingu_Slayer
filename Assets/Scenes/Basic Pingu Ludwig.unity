@@ -1144,7 +1144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3007216277869299355, guid: b8789c32ec715954aa41925350d281be, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4089140851968495317, guid: b8789c32ec715954aa41925350d281be, type: 3}
       propertyPath: m_IsActive
@@ -1152,15 +1152,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5643372869756815100, guid: b8789c32ec715954aa41925350d281be, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5643372869756815100, guid: b8789c32ec715954aa41925350d281be, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5643372869756815100, guid: b8789c32ec715954aa41925350d281be, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.03579712
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927455003066071103, guid: b8789c32ec715954aa41925350d281be, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927455003066071103, guid: b8789c32ec715954aa41925350d281be, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927455003066071103, guid: b8789c32ec715954aa41925350d281be, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8412161834429698825, guid: b8789c32ec715954aa41925350d281be, type: 3}
@@ -1328,8 +1340,10 @@ MonoBehaviour:
   rb: {fileID: 1175646337}
   player: {fileID: 824159853}
   speed: 7
+  health: 0
   minimalDistanceToPlayer: 3
-  slamForce: 2500
+  slamForce: 5000
+  slamDistance: 3
   jumpForce: 3000
   jumpDistance: 100
   animator: {fileID: 1175646340}
@@ -1622,7 +1636,7 @@ GameObject:
   - component: {fileID: 1272157317}
   - component: {fileID: 1272157316}
   m_Layer: 5
-  m_Name: Basic Pingu Ludwig
+  m_Name: BasicPinguLudwig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
