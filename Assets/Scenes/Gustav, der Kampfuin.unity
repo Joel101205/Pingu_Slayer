@@ -189,6 +189,35 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 175363602953457214, guid: b8789c32ec715954aa41925350d281be, type: 3}
   m_PrefabInstance: {fileID: 1998326024}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &107477001 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3007216277869299355, guid: b8789c32ec715954aa41925350d281be, type: 3}
+  m_PrefabInstance: {fileID: 1998326024}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &107477002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107477001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87aa0b5de80144712b57ca94449b3122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthBar
+  slider: {fileID: 107477006}
+--- !u!114 &107477006 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8927455003066071103, guid: b8789c32ec715954aa41925350d281be, type: 3}
+  m_PrefabInstance: {fileID: 1998326024}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107477001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &111605714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1770,9 +1799,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Gustva
   rb: {fileID: 1607687927}
   player: {fileID: 907428018}
+  animator: {fileID: 1607687931}
+  spriteRenderer: {fileID: 1607687929}
   speed: 7
-  health: 0
-  minimalDistanceToPlayer: 0
+  maxHealth: 10
+  meleeDamage: 1
+  damageFlash: {fileID: 2100000, guid: d095c593cfda50f4ba845f3c940f41b2, type: 2}
+  originalMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  minimalDistanceToPlayer: 3
+  healthBar: {fileID: 107477002}
   thrustDistance: 7
   slashDistance: 3
 --- !u!1 &1728331031
@@ -2275,7 +2310,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3007216277869299355, guid: b8789c32ec715954aa41925350d281be, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 107477002}
   m_SourcePrefab: {fileID: 100100000, guid: b8789c32ec715954aa41925350d281be, type: 3}
 --- !u!1 &2014155496
 GameObject:
@@ -2364,7 +2402,7 @@ Transform:
   m_GameObject: {fileID: 2014155496}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.2649426, y: 1.5999999, z: -10}
+  m_LocalPosition: {x: -4.2726054, y: 1.5999999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
